@@ -1,0 +1,25 @@
+h1 {
+  text-align: center;
+  font-size: 5.6rem;
+}
+.container {
+  height: 150px;
+  position: relative;
+  border: 3px solid green;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+#div1 {
+  border-radius: 5px;
+  background-color: #eeb8b8;
+  width: 75%;
+  align-content: center;
+  margin-left: 13%;
+}
