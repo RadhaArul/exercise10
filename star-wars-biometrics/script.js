@@ -7,12 +7,11 @@ async function getApi(value)
     let response = await fetch(api_url);
     let data = await response.json();
     console.log(data);
-    //David: I want to apply Filter here instead of foreach
-    // but i dont know how to use
-    data.results.forEach(element => {
-        if(element.name==value)
-        api_url=element.url;
-    });
+   
+    //extract particular people url
+   const filt =data.results.filter(item=>item.name==value)
+   api_url=filt.pop().url;
+
     response=await fetch(api_url);
     data=await response.json();
     let output="Height: "+data.result.properties.height + "\n" + "Mass: "+data.result.properties.mass +
