@@ -13,6 +13,7 @@
         data.cards.forEach(element => {
             url=element.image;
         });
+        document.getElementById('div1').innerHTML='';
         let img=document.createElement('img');
     img.src=url;
     document.getElementById('div1').appendChild(img);
